@@ -23,9 +23,8 @@ const NavLink = styled.a`
   align-items: center;
   text-decoration: none;
   color: #767676;
-
   &.active {
-    color: #019223;
+    color: #286140;
   }
 `;
 
@@ -47,7 +46,7 @@ export default function Navigation() {
     <NavWrapper>
       <NavLink
         href="/home"
-        className={activeBtn === "/home" ? "active" : ""}
+        className={activeBtn === "/chat" && "active"}
         onClick={(event) => handleClick("/home", event)}
       >
         <img src={activeBtn === "/home" ? fillHomeIcon : homeIcon} alt="홈" />
@@ -61,6 +60,7 @@ export default function Navigation() {
         <img
           src={activeBtn === "/chat" ? fillMessageIcon : messageIcon}
           alt="채팅"
+          width="24px"
         />
         <NavText>채팅</NavText>
       </NavLink>
