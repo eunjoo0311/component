@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import errorIcon from "../assets/icon-404.svg";
+import grayLogo from "../assets/symbol-logo-gray.svg";
 
-const ErrorWrapper = styled.div`
+const EmptyWrapper = styled.div`
   display: flex;
   height: 100vh;
   align-items: center;
@@ -9,16 +9,16 @@ const ErrorWrapper = styled.div`
   flex-direction: column;
   gap: 20px;
 `;
-const ErrorImg = styled.img`
+const EmptyImg = styled.img`
   margin-bottom: 12px;
 `;
-const ErrorText = styled.h2`
+const EmptyText = styled.h2`
   margin: 0px;
   font-weight: 400;
   font-size: 14px;
   color: #767676;
 `;
-const ErrorBtn = styled.button`
+const EmptyBtn = styled.button`
   /* width: 120px;
   height: 44px; */
   padding: 13px 25px;
@@ -28,12 +28,13 @@ const ErrorBtn = styled.button`
   border-radius: 44px;
   font-size: 14px;
 `;
-export default function Error() {
+
+export default function EmptyHome() {
   return (
-    <ErrorWrapper>
-      <ErrorImg src={errorIcon} alt="404페이지" />
-      <ErrorText>페이지를 찾을 수 없습니다.:&#40;</ErrorText>
-      <ErrorBtn>이전 페이지</ErrorBtn>
-    </ErrorWrapper>
+    <EmptyWrapper>
+      <EmptyImg src={grayLogo} alt="로고이미지" />
+      <EmptyText>유저를 검색해 팔로우 해보세요!</EmptyText>
+      <EmptyBtn>검색하기</EmptyBtn>
+    </EmptyWrapper>
   );
 }
