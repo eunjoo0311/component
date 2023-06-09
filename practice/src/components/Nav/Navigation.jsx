@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import homeIcon from "../assets/icon-home.svg";
-import editIcon from "../assets/icon-edit.svg";
-import fillHomeIcon from "../assets/icon-home-fill.svg";
-import messageIcon from "../assets/icon-message-circle.svg";
-import fillMessageIcon from "../assets/icon-message-circle-fill.svg";
-import userIcon from "../assets/icon-user.svg";
-import fillUserIcon from "../assets/icon-user-fill.svg";
+import homeIcon from "../../assets/icon-home.svg";
+import editIcon from "../../assets/icon-edit.svg";
+import fillHomeIcon from "../../assets/icon-home-fill.svg";
+import messageIcon from "../../assets/icon-message-circle.svg";
+import fillMessageIcon from "../../assets/icon-message-circle-fill.svg";
+import userIcon from "../../assets/icon-user.svg";
+import fillUserIcon from "../../assets/icon-user-fill.svg";
 
 const NavWrapper = styled.div`
   position: fixed;
@@ -47,7 +47,7 @@ export default function Navigation() {
       <NavLink
         href="/home"
         className={activeBtn === "/chat" && "active"}
-        onClick={(event) => handleClick("/home", event)}
+        onClick={event => handleClick("/home", event)}
       >
         <img src={activeBtn === "/home" ? fillHomeIcon : homeIcon} alt="홈" />
         <NavText>홈</NavText>
@@ -55,7 +55,7 @@ export default function Navigation() {
       <NavLink
         href="/chat"
         className={activeBtn === "/chat" ? "active" : ""}
-        onClick={(event) => handleClick("/chat", event)}
+        onClick={event => handleClick("/chat", event)}
       >
         <img
           src={activeBtn === "/chat" ? fillMessageIcon : messageIcon}
@@ -67,7 +67,7 @@ export default function Navigation() {
       <NavLink
         href="/post"
         className={activeBtn === "/post" ? "active" : ""}
-        onClick={(event) => handleClick("/post", event)}
+        onClick={event => handleClick("/post", event)}
       >
         <img src={editIcon} alt="게시물 작성" />
         <NavText>게시물 작성</NavText>
@@ -75,7 +75,7 @@ export default function Navigation() {
       <NavLink
         href="/profile"
         className={activeBtn === "/profile" ? "active" : ""}
-        onClick={(event) => handleClick("/profile", event)}
+        onClick={event => handleClick("/profile", event)}
       >
         <img
           src={activeBtn === "/profile" ? fillUserIcon : userIcon}

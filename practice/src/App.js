@@ -1,12 +1,13 @@
-import Navigation from "./components/Navigation";
 import "normalize.css";
-import SearchList from "./components/SearchList";
+import ChatNavigation from "./components/Nav/ChatNavigation";
+import ChatRoom from "./components/Chat/ChatRoom";
 // import Error from "./components/Error";
+
 export default function App() {
   return (
     <>
-      <Navigation />
-      <SearchList />
+      <ChatRoom />
+      <ChatNavigation />
     </>
   );
 }
