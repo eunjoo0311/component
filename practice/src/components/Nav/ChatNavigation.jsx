@@ -9,12 +9,14 @@ const ChatNavBar = styled.div`
   bottom: 0;
   display: flex;
   justify-content: space-between;
-  margin: 13px 16px;
+  align-items: center;
+  padding: 13px 16px;
   background-color: white;
 `;
 
 const ImageIcon = styled.img`
   width: 36px;
+  height: 36px;
 `;
 
 const Input = styled.input`
@@ -22,10 +24,9 @@ const Input = styled.input`
   border: none;
   outline: none;
   padding: 0;
-  margin: 0;
-  font-size: inherit;
-  width: 271px;
-
+  margin: 0 18px;
+  width: 100%;
+  font-size: 14px;
   &::placeholder {
     color: #c4c4c4;
   }
@@ -33,6 +34,7 @@ const Input = styled.input`
 
 const SendBtn = styled.button`
   /* 버튼 스타일 수정 */
+  width: 70px;
   border: none;
   background: none;
   color: ${({ hasText }) => (hasText ? "#286140" : "#C4C4C4")};
@@ -54,7 +56,7 @@ export default function ChatNavigation() {
       <ImageIcon src={imageIcon} alt="사진 선택하기" />
       <Input
         type="text"
-        placeholder="메시지 입력하기"
+        placeholder="메시지 입력하기.."
         value={inputValue}
         onChange={handleInputChange}
       />

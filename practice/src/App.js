@@ -1,13 +1,18 @@
 import "normalize.css";
 import ChatNavigation from "./components/Nav/ChatNavigation";
-import ChatRoom from "./components/Chat/ChatRoom";
+import Navigation from "./components/Nav/Navigation";
+import SendMessage from "./components/Chat/SendMessage";
+import ReceiveMessage from "./components/Chat/ReceiveMessage";
+// import SearchList from "./components/SearchList";
 // import Error from "./components/Error";
 
 export default function App() {
   return (
     <>
-      <ChatRoom />
-      <ChatNavigation />
+      <ReceiveMessage />
+      <SendMessage />
+
+      <Navigation />
     </>
   );
 }
